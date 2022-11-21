@@ -1,6 +1,10 @@
 package org.example;
 
-public class SpotifyUser implements Originator {
+import org.example.interfaces.Memento;
+import org.example.interfaces.Originator;
+import org.example.models.Song;
+
+public class SpotifySession implements Originator {
 
     private String currentSong;  // state
     private String currentArtist;
@@ -8,7 +12,7 @@ public class SpotifyUser implements Originator {
 
     /** Play previous song */
     @Override
-    public void setMemento(Memento memento) {   
+    public void setMemento(Memento memento) {
         this.currentSong = memento.getState();
         /*this.currentArtist = */
     }

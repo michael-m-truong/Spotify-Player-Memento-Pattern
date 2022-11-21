@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.models.Song;
+
 public class Driver {
     
     public static void main(String[] args) {
@@ -25,29 +27,29 @@ public class Driver {
         playlist0.addSong(song1);
         playlist0.addSong(song2); */
 
-        SpotifyUser spotifyUser = new SpotifyUser();  // originator
-        SpotifyPlayer spotifyPlayer = new SpotifyPlayer();  // caretaker
+        SpotifySession spotifySession = new SpotifySession();  // originator
+        SpotifyApp spotifyApp = new SpotifyApp();  // caretaker
 
-        spotifyUser.play(song0);
-        spotifyPlayer.addMemento(spotifyUser.createMemento());
-        System.out.println("Current song: " + spotifyUser.getCurrentSong() + " -- by " + spotifyUser.getCurrentArtist());
+        spotifySession.play(song0);
+        spotifyApp.addMemento(spotifySession.createMemento());
+        System.out.println("Current song: " + spotifySession.getCurrentSong() + " -- by " + spotifySession.getCurrentArtist());
 
-        spotifyUser.play(song4);
-        spotifyPlayer.addMemento(spotifyUser.createMemento());
-        System.out.println("Current song: " + spotifyUser.getCurrentSong() + " -- by " + spotifyUser.getCurrentArtist());
+        spotifySession.play(song4);
+        spotifyApp.addMemento(spotifySession.createMemento());
+        System.out.println("Current song: " + spotifySession.getCurrentSong() + " -- by " + spotifySession.getCurrentArtist());
 
-        spotifyUser.play(song8);
-        spotifyPlayer.addMemento(spotifyUser.createMemento());
-        System.out.println("Current song: " + spotifyUser.getCurrentSong() + " -- by " + spotifyUser.getCurrentArtist());
+        spotifySession.play(song8);
+        spotifyApp.addMemento(spotifySession.createMemento());
+        System.out.println("Current song: " + spotifySession.getCurrentSong() + " -- by " + spotifySession.getCurrentArtist());
 
         /** Going back to previous song intially plays twice b/c song replayed before going back (we can change this if wanted) */
-        spotifyUser.setMemento(spotifyPlayer.getMemento());
-        System.out.println("Current song: " + spotifyUser.getCurrentSong() + " -- by " + spotifyUser.getCurrentArtist());
+        spotifySession.setMemento(spotifyApp.getMemento());
+        System.out.println("Current song: " + spotifySession.getCurrentSong() + " -- by " + spotifySession.getCurrentArtist());
 
-        spotifyUser.setMemento(spotifyPlayer.getMemento());
-        System.out.println("Current song: " + spotifyUser.getCurrentSong() + " -- by " + spotifyUser.getCurrentArtist());
+        spotifySession.setMemento(spotifyApp.getMemento());
+        System.out.println("Current song: " + spotifySession.getCurrentSong() + " -- by " + spotifySession.getCurrentArtist());
 
-        spotifyUser.setMemento(spotifyPlayer.getMemento());
-        System.out.println("Current song: " + spotifyUser.getCurrentSong() + " -- by " + spotifyUser.getCurrentArtist());
+        spotifySession.setMemento(spotifyApp.getMemento());
+        System.out.println("Current song: " + spotifySession.getCurrentSong() + " -- by " + spotifySession.getCurrentArtist());
     }
 }
