@@ -1,3 +1,5 @@
+package org.example;
+
 public interface Originator {
 
     void setMemento(Memento memento);

@@ -1,3 +1,5 @@
+package org.example;
+
 public class Song implements Memento {
 
     private final String songName;

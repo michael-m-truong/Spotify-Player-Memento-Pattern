@@ -1,6 +1,8 @@
+package org.example;
+
 import java.util.Stack;
 
-public class SpotifyPlayer implements Caretaker{
+public class SpotifyPlayer implements Caretaker {
 
     Stack<Memento> songHistory = new Stack<>();
     

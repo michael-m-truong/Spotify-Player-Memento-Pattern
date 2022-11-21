@@ -1,4 +1,6 @@
-public class SpotifyUser implements Originator{
+package org.example;
+
+public class SpotifyUser implements Originator {
 
     private String currentSong;  // state
     private String currentArtist;
