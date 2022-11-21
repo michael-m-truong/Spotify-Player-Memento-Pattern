@@ -1,7 +1,7 @@
 public class Song implements Memento {
 
-    private String songName;
-    private String artistName;
+    private final String songName;
+    private final String artistName;
     //private String fromPlaylist;
 
     public Song(String songName, String artistName) {
