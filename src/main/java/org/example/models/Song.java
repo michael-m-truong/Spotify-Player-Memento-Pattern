@@ -5,12 +5,9 @@ import org.example.interfaces.Memento;
 public class Song implements Memento {
 
     private final String songName;
-    private final String artistName;
-    //private String fromPlaylist;
 
-    public Song(String songName, String artistName) {
+    public Song(String songName) {
         this.songName = songName;
-        this.artistName = artistName;
     }
 
     /** Memento should have a getter but NOT a setter */
@@ -23,9 +20,4 @@ public class Song implements Memento {
     public String getSongName() {
         return songName;
     }
-
-    public String getArtistName() {
-        return artistName;
-    }
-    
 }
