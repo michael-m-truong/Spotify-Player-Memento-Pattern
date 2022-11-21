@@ -2,17 +2,18 @@ package org.example;
 
 import org.example.interfaces.Caretaker;
 import org.example.interfaces.Memento;
+import org.example.models.Song;
 
 import java.util.Stack;
 
-public class SpotifyApp implements Caretaker {
-    Stack<Memento> songHistory = new Stack<>();
+public class SpotifyApp implements Caretaker<Song> {
+    Stack<Song> songHistory = new Stack<>();
 
-    public void addMemento(Memento memento) {
+    public void addMemento(Song memento) {
         songHistory.push(memento);
     }
 
-    public Memento getMemento() {
+    public Song getMemento() {
         return songHistory.pop();
     }
 }

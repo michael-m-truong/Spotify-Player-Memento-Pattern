@@ -1,5 +1,5 @@
 package org.example.interfaces;
 
-public interface Memento {
-    String getState();
+public interface Memento<T> {
+    T getState();
 }

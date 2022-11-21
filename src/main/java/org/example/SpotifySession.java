@@ -4,16 +4,16 @@ import org.example.interfaces.Memento;
 import org.example.interfaces.Originator;
 import org.example.models.Song;
 
-public class SpotifySession implements Originator {
+public class SpotifySession implements Originator<Song> {
     private String currentSong;  // state
 
     @Override
-    public void setMemento(Memento memento) {
+    public void setMemento(Song memento) {
         this.currentSong = memento.getState();
     }
 
     @Override
-    public Memento createMemento() {
+    public Song createMemento() {
         return new Song(currentSong);
     }
 

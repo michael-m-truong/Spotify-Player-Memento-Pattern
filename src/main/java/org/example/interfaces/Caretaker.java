@@ -1,7 +1,7 @@
 package org.example.interfaces;
 
-public interface Caretaker {
-    void addMemento(Memento memento);
+public interface Caretaker<T extends Memento<?>> {
+    void addMemento(T memento);
 
-    Memento getMemento();
+    T getMemento();
 }
