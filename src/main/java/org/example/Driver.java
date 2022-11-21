@@ -7,7 +7,7 @@ public class Driver {
     private static final SpotifyApp spotifyApp = new SpotifyApp();
 
     private static void play(Song song) {
-        spotifySession.play(song);
+        spotifySession.playSong(song);
         spotifyApp.addMemento(spotifySession.createMemento());
         System.out.println("Playing song: " + spotifySession.getCurrentSong());
     }

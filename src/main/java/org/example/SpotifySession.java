@@ -12,7 +12,6 @@ public class SpotifySession implements Originator {
         this.currentSong = memento.getState();
     }
 
-    /** Create memento to pass to caretaker */
     @Override
     public Memento createMemento() {
         return new Song(currentSong);
@@ -22,7 +21,7 @@ public class SpotifySession implements Originator {
         return currentSong;
     }
 
-    public void play(Song song) {
+    public void playSong(Song song) {
         this.currentSong = song.getSongName();
     }
 }

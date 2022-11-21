@@ -12,9 +12,7 @@ public class SpotifyApp implements Caretaker {
         songHistory.push(memento);
     }
 
-    //@Override
     public Memento getMemento() {
         return songHistory.pop();
     }
-    
 }
