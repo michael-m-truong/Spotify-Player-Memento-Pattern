@@ -4,9 +4,11 @@ import org.example.interfaces.Memento;
 
 public class Song implements Memento<String> {
     private final String songName;
+    
 
     public Song(String songName) {
         this.songName = songName;
+        
     }
 
     @Override
@@ -17,4 +19,5 @@ public class Song implements Memento<String> {
     public String getSongName() {
         return songName;
     }
+    
 }
