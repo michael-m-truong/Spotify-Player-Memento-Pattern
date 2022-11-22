@@ -19,7 +19,7 @@ public class Driver {
 
     public static void main(String[] args) {
         Song song0 = new Song("In your eyes - The Weekend");
-        Song song1 = new Song("Lose - Niki");
+        Song song1 = new Song("Lose - Niki" );
         Song song2 = new Song("Reputation - Post Malone");
 
         // Queue.
