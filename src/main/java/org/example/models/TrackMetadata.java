@@ -2,7 +2,7 @@ package org.example.models;
 
 import org.example.interfaces.Memento;
 
-public class TrackMetadata implements Memento<TrackMetadata> {
+public class TrackMetadata {
     private final String songArtist;
     private final String songTitle;
     private final String albumName;
@@ -17,12 +17,6 @@ public class TrackMetadata implements Memento<TrackMetadata> {
         this.runTime = runTime;
         this.genre = genre;
         this.explicitTag = explicitTag;
-    }
-
-    @Override
-    public TrackMetadata getState() {
-        // TODO Auto-generated method stub
-        return null;
     }
 
     public String getArtistName(){
