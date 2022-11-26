@@ -12,18 +12,18 @@ public class Driver {
     private static void play(Song song) {
         spotifySession.playSong(song);
         spotifyApp.addMemento(spotifySession.createMemento());
-        System.out.println("Playing song: " + spotifySession.getCurrentSong());
+        System.out.println("Playing song: " + spotifySession.getCurrentSong().getSongTitle() + " - " + spotifySession.getCurrentSong().getArtistName());
     }
 
     private static void previous() {
         spotifySession.setMemento(spotifyApp.getMemento());
-        System.out.println("Current song: " + spotifySession.getCurrentSong());
+        System.out.println("Playing song: " + spotifySession.getCurrentSong().getSongTitle() + " - " + spotifySession.getCurrentSong().getArtistName());
     }
 
     public static void main(String[] args) {
-        TrackMetadata metaSong0 = new TrackMetadata("The Weekend", "In Your Eyes", 238, "Soul, Pop", 0);
-        TrackMetadata metaSong1 = new TrackMetadata("Niki", "Lose", 257, "Indie Folk", 1);
-        TrackMetadata metaSong2 = new TrackMetadata("Post Malone", "Reputation", 249, "Soul, Pop", 1);
+        TrackMetadata metaSong0 = new TrackMetadata("The Weekend", "In Your Eyes", "After Hours", 238, "Soul, Pop", 0);
+        TrackMetadata metaSong1 = new TrackMetadata("Niki", "Lose", "MOONCHILD", 257, "Indie Folk", 1);
+        TrackMetadata metaSong2 = new TrackMetadata("Post Malone", "Reputation", "Twelve Carat Toothache", 249, "Soul, Pop", 1);
 
         Song song0 = new Song(metaSong0);
         Song song1 = new Song(metaSong1);

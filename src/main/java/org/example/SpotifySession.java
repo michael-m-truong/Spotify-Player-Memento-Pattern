@@ -1,11 +1,14 @@
 package org.example;
 
+import javax.sound.midi.Track;
+
 import org.example.interfaces.Memento;
 import org.example.interfaces.Originator;
 import org.example.models.Song;
+import org.example.models.TrackMetadata;
 
 public class SpotifySession implements Originator<Song> {
-    private String currentSong;  // state
+    private TrackMetadata currentSong;  // state
 
     @Override
     public void setMemento(Song memento) {
@@ -17,11 +20,11 @@ public class SpotifySession implements Originator<Song> {
         return new Song(currentSong);
     }
 
-    public String getCurrentSong() {
+    public TrackMetadata getCurrentSong() {
         return currentSong;
     }
 
     public void playSong(Song song) {
-        this.currentSong = song.getSongName();
+        this.currentSong = song.getMetadata();
     }
 }
