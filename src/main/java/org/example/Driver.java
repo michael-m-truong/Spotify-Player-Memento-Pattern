@@ -1,6 +1,9 @@
 package org.example;
 
+import javax.sound.midi.Track;
+
 import org.example.models.Song;
+import org.example.models.TrackMetadata;
 
 public class Driver {
     private static final SpotifySession spotifySession = new SpotifySession();
@@ -18,9 +21,13 @@ public class Driver {
     }
 
     public static void main(String[] args) {
-        Song song0 = new Song("In your eyes - The Weekend");
-        Song song1 = new Song("Lose - Niki" );
-        Song song2 = new Song("Reputation - Post Malone");
+        TrackMetadata metaSong0 = new TrackMetadata("The Weekend", "In Your Eyes", 238, "Soul, Pop", 0);
+        TrackMetadata metaSong1 = new TrackMetadata("Niki", "Lose", 257, "Indie Folk", 1);
+        TrackMetadata metaSong2 = new TrackMetadata("Post Malone", "Reputation", 249, "Soul, Pop", 1);
+
+        Song song0 = new Song(metaSong0);
+        Song song1 = new Song(metaSong1);
+        Song song2 = new Song(metaSong2);
 
         // Queue.
         play(song0);

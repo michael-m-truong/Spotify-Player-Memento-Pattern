@@ -1,23 +1,23 @@
 package org.example.models;
 
+import javax.sound.midi.Track;
+
 import org.example.interfaces.Memento;
 
-public class Song implements Memento<String> {
-    private final String songName;
-    
+public class Song implements Memento<TrackMetadata> {
+    private final TrackMetadata metadata;
 
-    public Song(String songName) {
-        this.songName = songName;
-        
+    public Song(TrackMetadata metadata){
+        this.metadata = metadata;
     }
 
     @Override
-    public String getState() {
-        return songName;
+    public TrackMetadata getState() {
+        return metadata;
     }
 
-    public String getSongName() {
-        return songName;
+    public TrackMetadata getMetadata() {
+        return metadata;
     }
     
 }
