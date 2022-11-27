@@ -11,6 +11,6 @@ There are 3 classes that must be added in order to implement the Memento pattern
 This pattern can be demonstrated through a playing music on a Spotify Player. When you play a song and want to go back to the previous song played, the Memento pattern is used. The song is the state being saved and restored. For our project: 
 1) SpotifySession class implements the Originator interface
 2) Song class implements the Memento interface 
-3) SpotifyApp implements the Caretaker class. 
+3) SpotifyApp implements the Caretaker interface. 
 
 When a user plays a song, a Song memento is created from the SpotifySession and saved to the SpotifyApp. All the mementos are saved in a Stack. If a user wants to go back to the previous song played, the SpotifyApp pops the memento on top of the stack and restores that state to the SpotifySession. 
